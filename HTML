@@ -1,40 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Free Events in Porto and Gaia</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Porto Events</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
-<header>
-<h1>Free Events in Porto and Gaia</h1>
-</header>
-<main>
-<section id="events">
-<table>
-<thead>
-<tr>
-<th>Day</th>
-<th>Time</th>
-<th>Event</th>
-<th>Website</th>
-</tr>
-</thead>
-<tbody>
-
-{{#events}}
-<tr>
-<td>${event.day}</td>
-<td>${event.start_time}-${event.end_time}</td>
-<td>${event.name_en}</td>
-<td><a href="${event.url}">${event.url}</a></td>
-</tr>
-{{/events}}
-
-</tbody>
-</table>
-</section>
-</main>
-<footer>
-<p>Copyright &copy; 2023</p>
-</footer>
-<body>
+    <header>
+        <h1>Porto Events</h1>
+    </header>
+    <main>
+        <section class="events">
+            <ul id="event-list"></ul>
+        </section>
+    </main>
+    <footer>
+        <p>Copyright &copy; 2023</p>
+    </footer>
+</body>
+</html>
