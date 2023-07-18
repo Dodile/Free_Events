@@ -1,0 +1,33 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+section {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+table {
+  width: 100%;
+}
+
+th {
+  text-align: center;
+  background-color: lightgray;
+}
+
+td {
+  text-align: center;
+}
+
+a {
+  color: blue;
+  text-decoration: none;
+}
