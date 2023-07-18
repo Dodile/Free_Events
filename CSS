@@ -4,30 +4,86 @@ body {
   padding: 0;
 }
 
-h1 {
-  text-align: center;
+header {
+  background-color: #000;
+  color: #fff;
+  height: 100px;
+  padding: 20px;
+}
+
+main {
+  background-color: #fff;
+  padding: 20px;
 }
 
 section {
-  margin: 10px;
-  padding: 10px;
-  border: 1px solid black;
+  margin-bottom: 20px;
 }
 
-table {
-  width: 100%;
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
-th {
-  text-align: center;
-  background-color: lightgray;
-}
-
-td {
-  text-align: center;
+li {
+  margin-bottom: 10px;
 }
 
 a {
-  color: blue;
+  color: #000;
   text-decoration: none;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+p {
+  line-height: 1.5;
+}
+
+.events {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.event {
+  width: 100%;
+  max-width: 300px;
+  margin: 10px;
+}
+
+.event h2 {
+  font-size: 18px;
+}
+
+.event p {
+  line-height: 1.5;
+}
+
+.event .date {
+  color: #999;
+}
+
+.event .time {
+  color: #999;
+}
+
+.event .location {
+  color: #999;
 }
