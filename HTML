@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Free Events in Porto and Gaia</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<h1>Free Events in Porto and Gaia</h1>
+</header>
+<main>
+<section id="events">
+<table>
+<thead>
+<tr>
+<th>Day</th>
+<th>Time</th>
+<th>Event</th>
+<th>Website</th>
+</tr>
+</thead>
+<tbody>
+
+{{#events}}
+<tr>
+<td>{{day}}</td>
+<td>{{start_time}}-{{end_time}}</td>
+<td>{{name_en}}</td>
+<td><a href="{{url}}">{{url}}</a></td>
+</tr>
+{{/events}}
+
+</tbody>
+</table>
+</section>
+</main>
+<footer>
+<p>Copyright &copy; 2023</p>
+</footer>
+<body>
