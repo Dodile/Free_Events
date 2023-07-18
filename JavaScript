@@ -1,0 +1,45 @@
+// This script gets the events from the Visit Portugal API.
+
+function getEvents() {
+  // Create a new XMLHttpRequest object.
+  var xhr = new XMLHttpRequest();
+
+  // Set the request method to GET.
+  xhr.open("GET", "https://api.visitportugal.com/v1/events?q=free&location=porto");
+
+  // Set the request headers.
+  xhr.setRequestHeader("Authorization", "Bearer YOUR_API_KEY");
+
+  // Send the request.
+  xhr.send();
+
+  // Handle the response.
+  xhr.onload = function() {
+    if (xhr.status === 200) {
+      // The request was successful.
+      var events = JSON.parse(xhr.responseText);
+
+      // Loop through the events and add them to the table.
+      for (var i = 0; i < events.length; i++) {
+        var event = events[i];
+
+        // Add the event to the table.
+        document.getElementById("events").innerHTML += `
+          <tr>
+            <td>${event.day}</td>
+            <td>${event.start_time}-${event.end_time}</td>
+            <td>${event.name_en}</td>
+            <td><a href="${event.url}">${event.url}</a></td>
+          </tr>
+        `;
+      }
+    } else {
+      // The request failed.
+      console.log("Error: " + xhr.status);
+    }
+  };
+}
+
+// This script updates the table every day at 9 AM.
+
+setInterval(getEvents, 86400000);
